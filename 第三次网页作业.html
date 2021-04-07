@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+h1 {
+  text-shadow: 2px 2px 5px red;
+}
+h2 {
+  text-shadow: 2px 2px 5px yellow;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* 设置页眉的样式 */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 设置顶部导航栏的样式 */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* 设置 topnav 链接的样式 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* 改变鼠标悬停时的颜色 */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* 创建并排的三个非等列 */
+.column {
+  float: left;
+  width: 25%;
+  padding: 30px;
+}
+/* 清除列之后的浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* 响应式布局 - 创建堆叠而非并排的三列 */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+#grad1{
+    background-color: red; /* 针对不支持渐变的浏览器 */
+    background-image: linear-gradient(to bottom right, red, yellow);
+}
+#grad0{
+    background-color:yellow; /* 针对不支持渐变的浏览器 */
+    background-image: linear-gradient(to bottom right, yellow,orange);
+}
+</style>
+</head>
+<body>
+
+<div class="header" id="grad0">
+  <h1>个人网页导航</h1>
+</div>
+
+<div class="topnav" id="grad1">
+  <a href="https://www.bilibili.com/" target="_blank">学习</a>
+  <a href="https://yz.chsi.com.cn/" target="_blank">考研</a>
+  <a href="https://www.bilibili.com/" target="_blank">娱乐</a>
+  <a href="https://v.qq.com/" target="_blank">追剧</a>
+
+</div>
+<div class="row">
+    <div class="column">
+      <h2>学习</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    </div>
+    
+    <div class="column">
+      <h2>考研</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    </div>
+    
+    <div class="column">
+      <h2>娱乐</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    </div>
+    <div class="column">
+        <h2>追剧</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+      </div>
+  </div>
+</body>
+</html>
